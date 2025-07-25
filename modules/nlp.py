@@ -3,8 +3,11 @@ import spacy
 try:
     import en_core_web_sm
     nlp = en_core_web_sm.load()
-except:
-    nlp = spacy.load("en_core_web_sm")
+except ImportError:
+    from spacy.cli import download
+    download("en_core_web_sm")
+    import en_core_web_sm
+    nlp = en_core_web_sm.load()
 
 SYMBOLIC_KEYWORDS = ["ritual", "sacrifice", "phoenix", "saturn", "rebirth"]
 
