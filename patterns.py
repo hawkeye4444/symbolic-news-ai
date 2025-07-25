@@ -1,3 +1,4 @@
+
 KNOWN_VALUES = {
     33: "Freemasonry",
     203: "Ritual",

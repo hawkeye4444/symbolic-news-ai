@@ -1,3 +1,4 @@
+
 import random
 
 def get_astrological_data(date):
